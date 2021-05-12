@@ -27,7 +27,7 @@ def move(board, index, player_character = "X")
   board[index] = player_character
 end
 
-#A players turn that accepts input for board position they want to play assigned to variable 'input'. Turns that str input into an int thats used as the array indicies via #input_to_index helper method. If the #valid_move helper method is true, call the #moev helper method to update the array with the players move and then display the updated game board. If the #valid_move is false, until its true use recursion to call the #turn method again.
+#A players turn that accepts input for board position they want to play assigned to variable 'input'. Turns that str input into an int thats used as the array indicies via #input_to_index helper method. If the #valid_move helper method is true, call the #moev helper method to update the array with the players move and then display the updated game board. If the #valid_move is false, until its true use recursion to call the #turn method again. A break is placed to ensure it doesn't infinite loop calling #turn.
 def turn(board)
   puts "Please enter 1-9:"
   input = gets.strip
